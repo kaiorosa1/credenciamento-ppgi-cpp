@@ -1,0 +1,4 @@
+class Qualis {
+    
+    public:
+};
