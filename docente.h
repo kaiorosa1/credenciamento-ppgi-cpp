@@ -11,7 +11,7 @@ class Docente {
     
     public:
     // getters and setters
-    long get_codigo();
+    long get_codigo(){ return codigo;}
 
 };
 

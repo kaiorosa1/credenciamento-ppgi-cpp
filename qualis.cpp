@@ -1,6 +1,1 @@
-#include<iostream>
-class Qualis {
-    std::string name;
-    int valor;
-    public:
-};
+#include "qualis.h"
