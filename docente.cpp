@@ -1,16 +1,8 @@
 #include <iostream>
 #include <ctime>
+#include "docente.h"
 
-class Docente {
-    long codigo;
-    std::string nome;
-    time_t data_ingresso; // what is the best type to store date
-    bool isCoordenador;
-    
-    public:
-    // getters and setters
-    long get_codigo(){
-        return codigo;
-    }
 
-};
+long get_codigo(){
+    return 0;
+}
