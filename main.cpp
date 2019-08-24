@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include "docente.h"
 
@@ -9,13 +10,20 @@ void readQualificacoesFile();
 void readRegrasPontuacaoFile();
 
 int main(){
-    Docente docente;
+
+    std::fstream fin;
+    // open docentes file
+    fin.open("docentes.csv", std::ios::in);
+    
     // read files
     readDocentesFile();
     readVeiculosFile();
     readPublicacoesFile();
     readQualificacoesFile();
     readRegrasPontuacaoFile();
+
+    // close files
+    fin.close();
 
     return 0;
 }
