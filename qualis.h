@@ -6,8 +6,12 @@ class Qualis {
     std::string nome;
     int valor;
     public:
-    void set_nome(std::string nome){ }
+    // getters and setters
     std::string get_nome(){return nome;}
+    int get_valor(){return valor;}
+    
+    void set_nome(std::string name){ nome=name;}
+    void set_valor(int value){valor=value;}
 };
 
 #endif
