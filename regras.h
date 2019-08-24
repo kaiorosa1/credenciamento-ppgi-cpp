@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <ctime>
+#include "qualis.h"
 
 class Regras {
     time_t data_inicio;
