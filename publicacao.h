@@ -9,7 +9,7 @@ class Publicacao{
     int ano;
     std::string sigla_veiculo;
     std::string titulo;
-    std::vector<Docente> listaDocentes;
+    std::vector<Docente> lista_docentes;
     int numero;
     int volume_periodico;
     std::string local_conferencia;
@@ -21,7 +21,7 @@ class Publicacao{
     int get_ano(){return ano;}
     std::string get_sigla_veiculo(){return sigla_veiculo;}
     std::string get_titulo(){return titulo;}
-    // get lista docentes
+    std::vector<Docente> get_lista_docentes(){return lista_docentes;}
     int get_numero(){return numero;}
     int get_volume_periodico(){return volume_periodico;}
     std::string get_local_conferencia(){return local_conferencia;}
@@ -31,7 +31,7 @@ class Publicacao{
     void set_ano(int year){ano = year;}
     void set_sigla_veiculo(std::string sigla){sigla_veiculo=sigla;}
     void set_titulo(std::string title){titulo=title;}
-    // get lista docentes
+    void set_lista_docentes(std::vector<Docente> ld){ lista_docentes = ld; }
     void set_numero(int num){numero=num;}
     void set_volume_periodico(int volume){volume_periodico=volume;}
     void set_local_conferencia(std::string local){local_conferencia=local;}
