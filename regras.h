@@ -2,13 +2,14 @@
 #define REGRAS_H
 
 #include <iostream>
+#include <vector>
 #include <ctime>
 #include "qualis.h"
 
 class Regras {
     time_t data_inicio;
     time_t data_fim;
-    //lista de Qualis
+    std::vector<Qualis> listaQualis;
     //lista de pontos
     double multiplicador_periodicos;
     int qtd_anos_considerar;

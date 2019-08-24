@@ -2,14 +2,14 @@
 #define PUBLICACAO_H
 
 #include <iostream>
+#include <vector>
 #include "docente.h"
 
 class Publicacao{
     int ano;
     std::string sigla_veiculo;
     std::string titulo;
-    //lista de docentes
-    //List<Docente> listaDocentes;
+    std::vector<Docente> listaDocentes;
     int numero;
     int volume_periodico;
     std::string local_conferencia;
