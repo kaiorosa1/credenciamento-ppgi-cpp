@@ -17,11 +17,29 @@ int main(){
         std::cout << "Could not open the file!" << std::endl;
         return 1;
     }
-
+    std::vector<Docente> listaDocentes;
+    // remove header from file
+    getline(file, input,';');
+    getline(file, input,';');
+    getline(file, input,';');
+    getline(file, input,';');
+    getline(file, input,'\n');
     while(file.good()){
-        getline(file, input,';');
+        Docente docente;
+        std::string cod,name,dt_nasc,dt_ing,is_coord;
+        getline(file, cod,';');
+        getline(file,name,';');
+        getline(file,dt_nasc,';');
+        getline(file,dt_ing,';');
+        getline(file,is_coord,'\n');
+        // docente.set_codigo(std::stol(cod,nullptr, 10));
+        // docente.set_nome(name);
+        // docente.set_data_nascimento();
+        // docente.set_data_ingresso();
+        // docente.set_is_coordenador();
         std::cout << input << std::endl;
     }
+
     // read files
     // readDocentesFile();
     // readVeiculosFile();
