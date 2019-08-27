@@ -29,14 +29,23 @@ int main(){
     while(file.good()){
         Docente docente;
         std::string cod,name,dt_nasc,dt_ing,is_coord;
+        tm date;
         getline(file, cod,';');
         getline(file,name,';');
         getline(file,dt_nasc,';');
+        std::stringstream ss(dt_nasc);
+        std::string day,month,year;
+        getline(ss,day,'/');
+        getline(ss,month,'/');
+        getline(ss,year,'/');
+        date.tm_mday = stoi(day);
+        date.tm_mon = stoi(month)-1;
+        date.tm_year = stoi(year)-1900;
         getline(file,dt_ing,';');
         getline(file,is_coord,'\n');
         docente.set_codigo(std::stol(cod));
         docente.set_nome(name);
-        // docente.set_data_nascimento();
+        docente.set_data_nascimento(date);
         // docente.set_data_ingresso();
         if(is_coord.compare("X") == 0){
             docente.set_is_coordenador(true);
