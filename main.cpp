@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
+#include <ctime>    
 #include <vector>
 #include "docente.h"
 
@@ -32,12 +34,17 @@ int main(){
         getline(file,dt_nasc,';');
         getline(file,dt_ing,';');
         getline(file,is_coord,'\n');
-        // docente.set_codigo(std::stol(cod,nullptr, 10));
-        // docente.set_nome(name);
+        docente.set_codigo(std::stol(cod));
+        docente.set_nome(name);
         // docente.set_data_nascimento();
         // docente.set_data_ingresso();
-        // docente.set_is_coordenador();
-        std::cout << input << std::endl;
+        if(is_coord.compare("X") == 0){
+            docente.set_is_coordenador(true);
+        }else{
+            docente.set_is_coordenador(false);
+        }
+       
+        std::cout << docente.get_nome() << " " << docente.get_is_coodernador() << std::endl;
     }
 
     // read files
