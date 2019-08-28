@@ -60,6 +60,8 @@ int main(){
             docente.set_is_coordenador(false);
         }
        
+        listaDocentes.push_back(docente);
+        
         std::cout << docente.get_nome() << " " << docente.get_is_coodernador() << std::endl;
     }
 
